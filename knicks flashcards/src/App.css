@@ -1,0 +1,59 @@
+.App {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.header p {
+  margin-top: 10px;
+}
+
+.flashcards {
+  width: 500px;
+  min-height: 250px;
+  margin: 30px auto;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: white;
+  border: 3px solid #f58426;
+  border-radius: 15px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.flashcards:hover {
+  transform: scale(1.03);
+}
+
+button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background: #006bb6;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.card-image {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
