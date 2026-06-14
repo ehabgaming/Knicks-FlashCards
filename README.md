@@ -43,7 +43,8 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='https://imgur.com/a/Q2kdRmY' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/TN1SOp0.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+https://i.imgur.com/TN1SOp0.gif
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with snipping tool windows
