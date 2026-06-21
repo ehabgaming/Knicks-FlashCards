@@ -79,23 +79,26 @@ const App = () => {
   const [userAnswer, SetUserAnswer] = useState("");
   const [correctAnswers, SetCorrectAnswers] = useState(0);
   const [incorrectAnswers, SetIncorrectAnswers] = useState(0);
+  const [feedback, SetFeedback] = useState("");
 
   const handleNext = () => {
     if (currentCard === flashcards.length - 1) {
-      SetCurrentCard(0);
+      return;
     }
 
     SetCurrentCard(currentCard + 1);
     SetIsFlipped(true);
+    SetFeedback("");
   };
 
   const handleBack = () => {
     if (currentCard === 0) {
-      SetCurrentCard(flashcards.length - 1);
+      return;
     }
 
     SetCurrentCard(currentCard - 1);
     SetIsFlipped(true);
+    SetFeedback("");
   };
 
   const handleFlip = () => {
@@ -118,8 +121,12 @@ const App = () => {
       flashcards[currentCard].answer.toLowerCase()
     ) {
       SetCorrectAnswers(correctAnswers + 1);
+      SetFeedback("Correct! Great job!");
     } else {
       SetIncorrectAnswers(incorrectAnswers + 1);
+      SetFeedback(
+        `Incorrect! The correct answer is: ${flashcards[currentCard].answer}`,
+      );
     }
 
     SetUserAnswer("");
@@ -145,6 +152,7 @@ const App = () => {
       />
       <br />
       <input type="submit" onClick={handleSubmit} />
+      <p>{feedback}</p>
 
       <div className="flashcards" onClick={handleFlip}>
         {!isFlipped && (
