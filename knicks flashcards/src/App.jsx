@@ -112,7 +112,7 @@ const App = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (userAnswer.trim() === "") {
+    if (userAnswer.trim() === "" || !isFlipped) {
       return;
     }
 
