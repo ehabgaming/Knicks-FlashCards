@@ -165,8 +165,15 @@ const App = () => {
         {currentCard + 1} of {flashcards.length}
       </h2>
 
-      <button onClick={handleBack}>Back</button>
-      <button onClick={handleNext}>Next</button>
+      <button disabled={currentCard === 0} onClick={handleBack}>
+        Back
+      </button>
+      <button
+        disabled={currentCard === flashcards.length - 1}
+        onClick={handleNext}
+      >
+        Next
+      </button>
     </div>
   );
 };

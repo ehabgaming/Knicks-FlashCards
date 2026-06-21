@@ -50,6 +50,11 @@ button:hover {
   opacity: 0.9;
 }
 
+button:disabled {
+  background-color: gray;
+  color: white;
+}
+
 .card-image {
   width: 200px;
   height: 150px;
