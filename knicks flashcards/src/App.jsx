@@ -76,15 +76,53 @@ const flashcards = [
 const App = () => {
   const [currentCard, SetCurrentCard] = useState(0);
   const [isFlipped, SetIsFlipped] = useState(false);
+  const [userAnswer, SetUserAnswer] = useState("");
+  const [correctAnswers, SetCorrectAnswers] = useState(0);
+  const [incorrectAnswers, SetIncorrectAnswers] = useState(0);
 
   const handleNext = () => {
-    const randomIndex = Math.floor(Math.random() * flashcards.length);
-    SetCurrentCard(randomIndex);
+    if (currentCard === flashcards.length - 1) {
+      SetCurrentCard(0);
+    }
+
+    SetCurrentCard(currentCard + 1);
+    SetIsFlipped(true);
+  };
+
+  const handleBack = () => {
+    if (currentCard === 0) {
+      SetCurrentCard(flashcards.length - 1);
+    }
+
+    SetCurrentCard(currentCard - 1);
     SetIsFlipped(true);
   };
 
   const handleFlip = () => {
     SetIsFlipped(!isFlipped);
+  };
+
+  const handleInput = (e) => {
+    SetUserAnswer(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (userAnswer.trim() === "") {
+      return;
+    }
+
+    if (
+      userAnswer.trim().toLowerCase() ===
+      flashcards[currentCard].answer.toLowerCase()
+    ) {
+      SetCorrectAnswers(correctAnswers + 1);
+    } else {
+      SetIncorrectAnswers(incorrectAnswers + 1);
+    }
+
+    SetUserAnswer("");
   };
 
   return (
@@ -93,7 +131,20 @@ const App = () => {
         <h1>Knicks Flashcards</h1>
         <p>Test your knowledge of the New York Knicks with these flashcards!</p>
         <p>number of flashcards: {flashcards.length}</p>
+        <h4>
+          User Correct Answers : {correctAnswers} <br /> User Incorrect Answers
+          : {incorrectAnswers}
+        </h4>
       </div>
+
+      <input
+        type="text"
+        placeholder="Type your answer here..."
+        value={userAnswer}
+        onChange={handleInput}
+      />
+      <br />
+      <input type="submit" onClick={handleSubmit} />
 
       <div className="flashcards" onClick={handleFlip}>
         {!isFlipped && (
@@ -113,6 +164,8 @@ const App = () => {
       <h2>
         {currentCard + 1} of {flashcards.length}
       </h2>
+
+      <button onClick={handleBack}>Back</button>
       <button onClick={handleNext}>Next</button>
     </div>
   );
