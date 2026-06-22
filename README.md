@@ -4,7 +4,7 @@ Submitted by: ehab othman
 
 This web app: knicks flash cards 
 
-Time spent: 3 hours spent in total
+Time spent: 4 hours spent in total
 
 ## Required Features
 
@@ -45,7 +45,8 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='[http://i.imgur.com/link/to/your/gif/file.gif](https://imgur.com/HTHHC6I)' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+https://imgur.com/a/H7qKCLk
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
