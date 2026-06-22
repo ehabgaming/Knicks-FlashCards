@@ -46,10 +46,13 @@ The following **additional** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 <img src='[http://i.imgur.com/link/to/your/gif/file.gif](https://imgur.com/HTHHC6I)' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+
 https://imgur.com/a/H7qKCLk
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
+GIF created with winsdow snapping tool
+https://imgur.com/a/H7qKCLk
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
